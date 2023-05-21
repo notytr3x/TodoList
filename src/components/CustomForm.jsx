@@ -5,6 +5,7 @@ const CustomForm = ({ addTask }) => {
   const [task, setTask] = useState("");
   const handleFormSubmit = (e) => {
     e.preventDefault();
+    // This function adds a new task in list
     addTask({
       name: task,
       checked: false,
