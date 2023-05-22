@@ -1,17 +1,10 @@
 import React, { useState } from "react";
 import { PlusIcon } from "@heroicons/react/24/solid";
 
-const CustomForm = ({ addTask }) => {
+const EditForm = ({ }) => {
   const [task, setTask] = useState("");
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    // This function adds a new task in list
-    addTask({
-      name: task,
-      checked: false,
-      id: Date.now(),
-    });
-    setTask("");
   };
 
 
@@ -43,4 +36,4 @@ const CustomForm = ({ addTask }) => {
   );
 };
 
-export default CustomForm;
+export default EditForm;
