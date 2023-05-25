@@ -2,7 +2,7 @@ import TaskItem from "./TaskItem";
 
 import styles from "./TaskList.module.css";
 
-const TaskList = ({ tasks, deleteTask,toggleTask}) => {
+const TaskList = ({ tasks, deleteTask,toggleTask, enterEditMode}) => {
   return (
     <ul className={styles.tasks}>
       {tasks
@@ -10,7 +10,8 @@ const TaskList = ({ tasks, deleteTask,toggleTask}) => {
         .map((task) => (
           <TaskItem key={task.id} task={task}
           deleteTask={deleteTask}  
-          toggleTask = {toggleTask}/>
+          toggleTask = {toggleTask}
+          enterEditMode={enterEditMode}/>
         ))}
     </ul>
   );
